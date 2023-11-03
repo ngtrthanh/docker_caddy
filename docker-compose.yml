@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  caddy:
+    image: caddy
+    restart: unless-stopped
+    ports: 
+      - "80:80"
+      - "443:443"
+    networks:
+      - caddy-net
+    volumes:
+      - ./caddy/data/:/data/
+      - ./caddy/config/:/config/
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ~/var/www/example.com:/var/www/html/example.com
+
+networks:
+  caddy-net:
