@@ -1,0 +1,26 @@
+{
+    email yourname@example.com
+}
+
+# for subdomain
+subdomain1.example.com {
+    reverse_proxy http://10.0.0.15:5000
+}
+
+# for subdomain also
+adsb01.example.com {
+    reverse_proxy http://192.168.11.222:8080
+}
+
+# static web
+example.com {
+    root * /var/www/html/example.com
+    file_server
+}
+
+# subfolder
+example.com/ais {
+    handle_path /ais/*
+    reverse_proxy http://10.0.0.15:5050
+}
+
