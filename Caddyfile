@@ -24,3 +24,10 @@ example.com/ais {
     reverse_proxy http://10.0.0.15:5050
 }
 
+# basic authentication
+yourdomain.com {
+    basicauth /yourpath username password
+    reverse_proxy http://your-upstream-server
+}
+
+
