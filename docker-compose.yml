@@ -11,7 +11,7 @@ services:
     volumes:
       - ./caddy/data/:/data/
       - ./caddy/config/:/config/
-      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - Caddyfile:/etc/caddy/Caddyfile
       - ~/var/www/example.com:/var/www/html/example.com
 
 networks:
