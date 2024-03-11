@@ -1,2 +1,2 @@
 # docker_caddy
-docker caddy for reverse proxy
+Caddy reverse proxy docker
